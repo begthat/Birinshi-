@@ -32,7 +32,7 @@ async def send_salem(sms:types.Message):
         for i in users:
             if sms.from_user.id in i:
                 await sms.answer(text='Qaytqaninizdan quwanishlimiz',reply_markup=menu_menu)
-            break
+                break
         else:
             await sms.answer(text='Salem '+str(sms.from_user.id)+ ', jana paydalaniwshi',
                             reply_markup=new_menu)
